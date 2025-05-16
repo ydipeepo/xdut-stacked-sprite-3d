@@ -34,17 +34,17 @@
 * `StackedSprite3D` ノードを配置する
 * `MeshInstance3D` もしくは `MultiMeshInstance3D` に `StackedSpriteMesh` リソースを設定する
 
-ここでは `StackedSprite3D` ノードを使います。
+ここでは `StackedSprite3D` ノードを使います:
 
 ![`StackedSprite3D` ノードを追加する](./assets/texture/01.png)
 
 #### ディフューズの設定
 
-ディフューズテクスチャ (`albedo_texture` プロパティ) を設定し、垂直分割数 (`frames` プロパティ) を設定します。<br />
+ディフューズテクスチャ (`albedo_texture` プロパティ) を設定し、垂直分割数 (`frames` プロパティ) を設定します:
 
 ![`albedo_texture` プロパティと `frames` プロパティを設定する](./assets/texture/02.png)
 
-> [!INFO]
+> [!NOTE]
 > ここでのディフューズテクスチャとは、<br />
 > 以下のようなスプライトを横方向に等間隔に並べた 2D テクスチャです。
 >
@@ -59,17 +59,17 @@
 #### 法線の設定 (任意)
 
 法線テクスチャ (`normal_texture` プロパティ) を設定もしくは生成します。ここでは自動生成します。<br />
-Normal Texture グループを開き、Generate normal texture ボタンをクリックします。
+Normal Texture グループを開き、Generate normal texture ボタンをクリックします:
 
 ![法線テクスチャを自動生成する](./assets/texture/03.png)
 
-> [!INFO]
+> [!NOTE]
 > 法線テクスチャは、UVW ボリュームアドレスがディフューズテクスチャのものと一致します。<br />
 > ピクセル RGB 各色は、法線ベクトル XYZ にそれぞれマッピングされます。<br />
 > RGB 各成分 0 ~ 255 の値は、法線ベクトル各成分 -1.0 ~ +1.0 に対応し、<br />
 > このベクトルはシェーダー内部で正規化されます。
 
-> [!INFO]
+> [!NOTE]
 > タイルボリュームなどで用いる場合 (他のボリュームと接触する境界を含む場合)、XYZ 各軸のサンプラを変更します。
 >
 > | サンプラ | 説明 |
@@ -79,17 +79,15 @@ Normal Texture グループを開き、Generate normal texture ボタンをク�
 > | Repeat | 範囲外のアドレスを接合点で繰り返します。 |
 > | Mirror | 範囲外のアドレスを接合点でミラーリングします。 |
 
-> [!WARN]
+> [!CAUTION]
 > 最大スキャンピクセル距離 (`max_scan_distance` プロパティ) を大きくし過ぎると生成に時間がかかることがあります。<br />
-
-<br />
 
 #### マテリアルの設定 (任意)
 
 マテリアルを設定するには、法線テクスチャが設定されている必要があります。<br />
 マテリアルグループを開き、各プロパティを設定します。
 
-> [!INFO]
+> [!NOTE]
 > `emission_texture`、`specular_texture`、`metallic_texture` はそれぞれ各ピクセルの R 成分のみを読み込みます。<br />
 > R 成分 0 ~ 255 の値は、0.0 ~ 1.0 に対応します。
 
@@ -97,7 +95,7 @@ Normal Texture グループを開き、Generate normal texture ボタンをク�
 
 ## ライセンス
 
-🔗 [MIT](https://github.com/ydipeepo/xdut-task/blob/main/LICENSE) ライセンスです。
+🔗 [MIT](https://github.com/ydipeepo/xdut-stacked-sprite-3d/blob/main/LICENSE) ライセンスです。
 
 #### 表記
 
